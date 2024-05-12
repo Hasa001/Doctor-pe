@@ -7,9 +7,10 @@ import Razorpay from 'razorpay'
 export const app = express()
 
 app.use(cors({
-    origin: ['https://doctor-pe-client.vercel.app/','http://localhost:5173/'],
-    credentials:true
+    origin: ['https://doctor-pe-client.vercel.app/'],
+    credentials: true
 }))
+
 app.use(express.json())
 
 export const zodSchema = z.object({
@@ -25,4 +26,4 @@ export const razorpay = new Razorpay({
     key_secret: process.env.RAZORPAY_KEY_SECRET,
 }); 
 
-app.use("/api/v1", router)
+app.use("/api/v1", router)
