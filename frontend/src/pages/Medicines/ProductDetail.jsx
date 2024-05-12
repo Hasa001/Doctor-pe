@@ -16,7 +16,7 @@ export const ProductDetail = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('https://doctor-pe-backend.vercel.app/api/v1/product/getProduct');
+                const response = await axios.get('https://doctor-pe-server.vercel.app/api/v1/product/getProduct');
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error);

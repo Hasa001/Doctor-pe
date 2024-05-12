@@ -58,7 +58,7 @@ export const BookDoctor = () => {
 
 
     useEffect(() => {
-        axios.get("https://doctor-pe-backend.vercel.app/api/v1/user/searchDoctor")
+        axios.get("https://doctor-pe-server.vercel.app/api/v1/user/searchDoctor")
             .then(response => {
                 setUsers(response.data); 
             })
@@ -68,7 +68,7 @@ export const BookDoctor = () => {
     }, []);
 
     useEffect(() => {
-        axios.get("https://doctor-pe-backend.vercel.app/api/v1/user/fetchAppointment")
+        axios.get("https://doctor-pe-server.vercel.app/api/v1/user/fetchAppointment")
             .then(response => {
                 setToDeleteAppointments(response.data); 
             })
@@ -92,7 +92,7 @@ export const BookDoctor = () => {
                 try {
                     await axios({
                         method: 'delete',
-                        url: `https://doctor-pe-backend.vercel.app/api/v1/user/deleteAppointment`,
+                        url: `https://doctor-pe-server.vercel.app/api/v1/user/deleteAppointment`,
                         data: { appointmentId: appointment._id }
                     });                    
                     console.log(`Appointment ${appointment._id} deleted because its date and time have passed.`);
@@ -126,7 +126,7 @@ export const BookDoctor = () => {
             return
         }
         try {
-            await axios.post("https://doctor-pe-backend.vercel.app/api/v1/user/bookAppointment", {
+            await axios.post("https://doctor-pe-server.vercel.app/api/v1/user/bookAppointment", {
                 doctorId, 
                 date: selectedDateTime.date, 
                 time: selectedDateTime.time 

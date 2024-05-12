@@ -24,7 +24,7 @@ function Signin() {
     try {
       dispatch(signInStart());
     
-      const response = await axios.post('https://doctor-pe-backend.vercel.app/api/v1/auth/signin', {
+      const response = await axios.post('https://doctor-pe-server.vercel.app/api/v1/auth/signin', {
         email,
         password
       });

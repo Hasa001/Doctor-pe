@@ -49,7 +49,7 @@ export const HomePage = () => {
     }
 
     useEffect(() => {
-        axios.put('https://doctor-pe-backend.vercel.app/api/v1/product/updateAllProductQuantity')
+        axios.put('https://doctor-pe-server.vercel.app/api/v1/product/updateAllProductQuantity')
         const token = localStorage.getItem('token');
 
         if(token) {

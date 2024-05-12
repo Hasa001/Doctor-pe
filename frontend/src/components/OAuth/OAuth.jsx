@@ -28,7 +28,7 @@ function OAuth() {
             firstName = nameParts[0];
             lastName = nameParts[nameParts.length - 1];
             
-            const res = await fetch('https://doctor-pe-backend.vercel.app/api/v1/auth/google', {
+            const res = await fetch('https://doctor-pe-server.vercel.app/api/v1/auth/google', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
