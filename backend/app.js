@@ -8,9 +8,9 @@ export const app = express()
 
 app.use(cors({
     origin: [
-       ' https://doctor-pe-v1.vercel.app/',
-       
-        ,'https://localhost:5173/'],
+       ' https://doctor-pe-v1.vercel.app',
+
+        ,'https://localhost:5173'],
     credentials: true
 }))
 
