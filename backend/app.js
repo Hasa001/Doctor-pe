@@ -6,7 +6,7 @@ import Razorpay from 'razorpay'
 
 export const app = express()
 
-app.use(cors())
+
 
 app.use(express.json())
 
@@ -23,4 +23,5 @@ export const razorpay = new Razorpay({
     key_secret: process.env.RAZORPAY_KEY_SECRET,
 }); 
 
+app.use(cors())
 app.use("/api/v1", router)
