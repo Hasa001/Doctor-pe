@@ -6,8 +6,6 @@ import Razorpay from 'razorpay'
 
 export const app = express()
 
-
-
 app.use(express.json())
 
 export const zodSchema = z.object({
