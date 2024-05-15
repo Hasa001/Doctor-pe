@@ -10,7 +10,7 @@ export const ProductInCart = ({ id, title, description, price, image, quantity, 
     const increaseQuantity = async () => {
         const newQuantity = productQuantity + 1; 
 
-        const response = await axios.put('https://doctor-pe-server.vercel.app/api/v1/product/updateProductQuantity', {
+        const response = await axios.put('https://doctor-pe.vercel.app/api/v1/product/updateProductQuantity', {
             id: id,
             quantity: newQuantity
         })
@@ -23,7 +23,7 @@ export const ProductInCart = ({ id, title, description, price, image, quantity, 
     const decreaseQuantity = async () => {
         if (productQuantity > 1) { 
             const newQuantity = productQuantity - 1;
-            const response = await axios.put('https://doctor-pe-server.vercel.app/api/v1/product/updateProductQuantity', {
+            const response = await axios.put('https://doctor-pe.vercel.app/api/v1/product/updateProductQuantity', {
                 id: id,
                 quantity: newQuantity
             })
