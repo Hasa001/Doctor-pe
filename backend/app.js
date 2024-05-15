@@ -6,13 +6,7 @@ import Razorpay from 'razorpay'
 
 export const app = express()
 
-app.use(cors({
-    origin: [
-       ' https://doctor-pe-v1.vercel.app','https://doctor-pe-v1-harshits-projects-e8f9c12d.vercel.app','https://doctor-pe-v1-git-main-harshits-projects-e8f9c12d.vercel.app'
-
-        ,'https://localhost:5173'],
-    credentials: true
-}))
+app.use(cors())
 
 app.use(express.json())
 
