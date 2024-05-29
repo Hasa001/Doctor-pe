@@ -100,7 +100,6 @@ export const SearchDoctor = () => {
                 <div className="text-2xl font-medium font-serif p-10 pl-20">
                     <Heading title="Doctors" preText={'Our'}/>
                 </div>
-                {/* <Flash> */}
                     <div className="flex justify-around w-100  item-center">
                         <div className="transition duration-700 ease-in-out transform hover:scale-105 hover:cursor-pointer hover:shadow-2xl hover:shadow-cyan-500  rounded-3xl p-3 bg-white hover:underline ">
                             {["ALL", "CARDIOLOGY", "ORTHOPEDICS", "CONCOLOGY", "DERMATOLOGY", "SURGERY", "GYNOCOLOGY"].map(specialty => (
@@ -112,18 +111,14 @@ export const SearchDoctor = () => {
                             ))}
                         </div>
                     </div>
-                {/* </Flash> */}
-            </div>
 
-            {/* <Flash> */}
+            </div>
             {isLoading ?<div className="grid grid-cols-5"><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/><DoctorLoadingCard/></div>
             :<div className="grid grid-cols-5">{filteredUsers.map(user => (
-                // console.log(user.speciality);
-            //    <><h1>{user.speciality}</h1>
+
                         <DoctorCard key={user._id} onClick={() => handleOnClick(user._id, user.email, user.fullname, selectedDateTime)} name={user.fullname} email={user.email} description={"Sample Description"} speciality={user.speciality} label={"Schedule Appointment"}/>
                           ))}
                 </div>}
-            {/* </Flash> */}
             <div>
                 <ChatBotButton />
             </div>
